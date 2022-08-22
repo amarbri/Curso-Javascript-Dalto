@@ -18,5 +18,5 @@ if (operacion == 1) {
 }
 
 const result = (suma) => {
-    
+    return 5;
 }
