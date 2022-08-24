@@ -1,4 +1,4 @@
-class celular {
+class Celular {
     constructor (color, peso, rp, rc, memoria) {
         this.color = color;
         this.peso = peso;
@@ -46,9 +46,36 @@ class celular {
     }
 
     mostrarInfo() {
-        
+        return `
+        Color: <b>${this.color}</b><br>
+        Peso: <b>${this.peso}</b><br>
+        Tañamo: <b>${this.resolucionPantalla}</b><br>
+        Resolución de cámara: <b>${this.resolucionCamara}</b><br>
+        Memoria: <b>${this.memoria}</b><br>
+        `;        
     }
 }
+
+
+class CelularAltaGama extends Celular {
+    constructor(color, peso, rp, rc, memoria, camaraExtra) {
+        super(color, peso, rp, rc, memoria);
+        this.camaraExtra = camaraExtra;
+    }
+
+    grabarSuperLento() {
+        alert(`grabando video en cámara super lenta`);
+    }
+
+    reconocimientoFacial() {
+        alert(`reconociendo cara`);
+    }
+
+    mostrarInfo() {
+        return super.mostrarInfo() + `Cámara Extra: <b>${this.camaraExtra}</b><br>`;
+    }
+}
+
 
 
 

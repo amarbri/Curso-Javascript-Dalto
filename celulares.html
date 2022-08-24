@@ -9,9 +9,20 @@
 </head>
 <body>
     <script>
-        const celular1 = new celular("rojo", "150 gr.", "5'", "hd", "1 Gb")
-        const celular2 = new celular("negro", "155 gr.", "5.4'", "full hd", "2 Gb")
-        const celular3 = new celular("blanco", "146 gr.", "5.9'", "full hd", "2 Gb")
+        const celular1 = new Celular("rojo", "150 gr.", "5'", "hd", "1 Gb");
+        const celular2 = new Celular("negro", "155 gr.", "5.4'", "full hd", "2 Gb");
+        const celular3 = new Celular("blanco", "146 gr.", "5.9'", "full hd", "2 Gb");
+        
+        const celular4 = new CelularAltaGama("rojo", "130 gr.", "5.4'", "4k", "3 Gb", "hd");
+        const celular5 = new CelularAltaGama("negro", "142 gr.", "6'", "4k", "4 Gb", "full hd");
+
+        document.write(`
+        ${celular1.mostrarInfo()} <br>
+        ${celular2.mostrarInfo()} <br>
+        ${celular3.mostrarInfo()} <br>
+        ${celular4.mostrarInfo()} <br>
+        ${celular5.mostrarInfo()} <br>        
+        `);
 
         //celular1.prender();
         //celular1.tomarFoto();
