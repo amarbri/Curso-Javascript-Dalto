@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="apps.js"></script>
+</head>
+<body>
+    <script>
+        const app = new App("16.000", "5 estrellas", "900 Mb");
+        const app1 = new App("1.000", "4 estrellas", "200 Mb");
+        const app2 = new App("6.000", "3 estrellas", "100 Mb");
+        const app3 = new App("900", "5 estrellas", "50 Mb");
+
+        app.instalar();    
+        app.abrir();
+        app.cerrar();
+        app.desinstalar();
+
+document.write(`
+    ${app.appInfo()} <br>
+    ${app1.appInfo()} <br>
+    ${app2.appInfo()} <br>
+    ${app3.appInfo()} <br>
+    `);
+
+    </script>
+</body>
+</html>
